@@ -2,12 +2,29 @@ productos={}
 cantidad=int(input("\n¿Cuántos productos distintos hay en existencia? : "))
 for i in range(cantidad):
     print(f"\nProducto No.{i+1}")
-    codigo= int(input("\nIngrese el Código del producto: "))
-    nombre=input("\nIngrese el Código del producto: ")
-    categoria=input("\nIngrese el Código del producto: ")
-    talla=input("\nIngrese el Código del producto: ")
-    preciouni = int(input("\nIngrese el Código del producto: "))
-    stock = int(input("\nIngrese el Código del producto: "))
+    while True:
+        codigo = int(input("\nIngrese el Código del producto: "))
+        if codigo in productos:
+            print(f"\nProducto {codigo} ya existe, vuelve a intentarlo.")
+        else:
+            break
+
+    nombre=input("\nIngrese el Nombre del producto: ")
+    categoria=input("\nIngrese la Categoría del producto: ")
+    talla=input("\nIngrese la Talla del producto: ")
+    while True:
+        preciouni = int(input("\nIngrese el Precio Unitario del producto: "))
+        if preciouni <= 0:
+            print("Error ha ingresado un precio unitario menor o igual a 0")
+        else:
+            break
+    while True:
+        stock = int(input("\nIngrese el Stock del producto: "))
+        if stock <= 0:
+            print("Error ha ingresado un stock menor a 0")
+        else:
+            break
+
     productos[codigo]={
         "nombre":nombre,
         "categoría":categoria,
