@@ -57,4 +57,20 @@ if buscar in productos:
 else:
     print("Producto no Encontrado")
 
+woman= 0
+men = 0
+kids= 0
+for codigo,datos in productos.items():
+    if datos['Categoria'] <= "Mujer":
+        woman+=1
+    elif datos['Categoria'] <= "Hombre":
+        men+=1
+    elif datos['Categoria'] <= "Niño":
+        kids+=1
+
+print("\nRopa por categoria")
+print(f"\nMujeres: {woman}")
+print(f"\nHombres: {men}")
+print(f"\nNiño: {kids}")
+
 
