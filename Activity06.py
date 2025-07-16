@@ -73,10 +73,16 @@ print(f"\nMujeres: {woman}")
 print(f"\nHombres: {men}")
 print(f"\nNiño: {kids}")
 
-subtotal = int
+subtotal = 0
+totaluni = 0
+total = 0
+cantidad = 0
 for codigo,datos in productos.items():
-    subtotal = 0
-    datos['preciouni']
+    subtotal = datos['preciouni'] * datos['stock']
+    total += subtotal
+
+print(total)
+
 
 
 
